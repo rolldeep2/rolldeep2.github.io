@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이영우 포트폴리오</title>
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body onload="new App()">
+    <header>
+      <div id="wave"></div>
+      <div id="introbox">
+        <span id="intro"></span><span id="intro2"></span
+        ><span class="blink">|</span>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my-nav">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav my-navbar">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >HOME <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TECH STACKS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content-wrap">
+      <div class="content-container">
+        <div class="content-1 content">
+          <div class="title">
+            <h2>ABOUT</h2>
+          </div>
+
+          <span>
+            유치원 시절, 저희 집엔 아버지께서 어디서 주워오신 고장 난 컴퓨터가
+            있었습니다. <br />
+            맞벌이 가정에 나이 차가 있던 형은 어린 저와 놀아 줄 시간이 없었고,
+            그 고장 난 컴퓨터는 어린 저의 유일한 친구였습니다.<br />
+            아무것도 출력되지 않는 까만 CRT 모니터에게 저는 몇 시간이고 말을
+            걸었던 기억이 납니다. <br />
+            우스꽝스럽게도 어릴 적 저의 꿈은 컴퓨터의 친구가 되는 것 이었습니다.
+            <br /><br />
+            대학교에 진학 한 뒤에 웹프로그래밍, 웹퍼블리싱 강의로 코딩을 처음
+            접했습니다. <br />html, css와 간단한 javascript 였지만 컴퓨터와
+            소통을 하는 듯한 기분이 들어 어린 시절 기억이 떠오르곤 했습니다.<br />
+            다양한 컴퓨터 언어를 배우고 싶었고 더 어려운 코딩도 해보고
+            싶었습니다.<br />
+            아직 늦지 않았다고 생각한 저는 웹 개발자 교육을 받기 시작했습니다.
+            <br />
+            <br />
+            현재는 프론트엔드 개발자가 되기 위해 노력하고 있고, React에 큰
+            관심이 있습니다.
+          </span>
+        </div>
+
+        <div class="content-2 content">
+          <div class="title">
+            <h2>TECH STACKS</h2>
+          </div>
+
+          <div class="tech-box">
+            <div class="circle_progress_wrap">
+              <svg
+                class="circle_progress"
+                width="240"
+                height="240"
+                viewBox="0 0 240 240"
+              >
+                <circle
+                  class="frame"
+                  cx="120"
+                  cy="120"
+                  r="100"
+                  stroke-width="12"
+                />
+                <circle class="bar" cx="120" cy="120" r="100" stroke-width="12" />
+              </svg>
+              
+              <div class="value"><h4>HTML</h4><span>90%</span></div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
