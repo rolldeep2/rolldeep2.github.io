@@ -50,31 +50,51 @@ function remove() {
 
 setTimeout(type, 2200);
 
+//여기부터 하면됨. 220511-2112 html 하나의 서클이니까 여러개로 맞춰서 코딩
+var barHtml = document.querySelector(".bar-html");
+var barCss = document.querySelector(".bar-css");
+var barReact = document.querySelector(".bar-react");
+var barJs = document.querySelector(".bar-js");
+var barTs = document.querySelector(".bar-ts");
+var barJava = document.querySelector(".bar-java");
 
 
 
-
-
-
-
-
-
-
-
-//여기부터 하면됨. 220511-2112 html 하나의 서클이니까 여러개로 맞춰서 코딩 
-var bar = document.querySelector(".bar");
-var value = document.querySelector(".value");
-
-var RADIUS = 100;
+var RADIUS = 15.5;
 var CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-function progress(per) {
-  var progress = per / 100;
-  var dashoffset = CIRCUMFERENCE * (1 - progress);
+function progress(html, css, react, js, ts, java) {
+  var progress = [
+    html / 100,
+    css / 100,
+    react / 100,
+    js / 100,
+    ts / 100,
+    java / 100,
+  ];
+  var dashoffset = [
+    CIRCUMFERENCE * (1 - progress[0]),
+    CIRCUMFERENCE * (1 - progress[1]),
+    CIRCUMFERENCE * (1 - progress[2]),
+    CIRCUMFERENCE * (1 - progress[3]),
+    CIRCUMFERENCE * (1 - progress[4]),
+    CIRCUMFERENCE * (1 - progress[5]),
+  ];
 
-  bar.style.strokeDashoffset = dashoffset;
+  barHtml.style.strokeDashoffset = dashoffset[0];
+  barCss.style.strokeDashoffset = dashoffset[1];
+  barReact.style.strokeDashoffset = dashoffset[2];
+  barJs.style.strokeDashoffset = dashoffset[3];
+  barTs.style.strokeDashoffset = dashoffset[4];
+  barJava.style.strokeDashoffset = dashoffset[5];
+  
 }
 
-bar.style.strokeDasharray = CIRCUMFERENCE;
+barHtml.style.strokeDasharray = CIRCUMFERENCE;
+barCss.style.strokeDasharray = CIRCUMFERENCE;
+barReact.style.strokeDasharray =CIRCUMFERENCE;
+barJs.style.strokeDasharray =CIRCUMFERENCE;
+barTs.style.strokeDasharray =CIRCUMFERENCE;
+barJava.style.strokeDasharray =CIRCUMFERENCE;
 
-progress(90);
+progress(90, 90, 80, 80, 50, 70);
