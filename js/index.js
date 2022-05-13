@@ -160,7 +160,7 @@ $(document).on("click", ".nav-item a", function (event) {
   event.preventDefault();
   $("html,body").animate(
     {
-      scrollTop: $(this.hash).offset().top - 150
+      scrollTop: $(this.hash).offset().top - 150,
     },
     500
   );
@@ -181,3 +181,11 @@ function navigo() {
   }
 }
 navigo();
+const trophy = document.querySelector(".trophy-modal");
+function enterTrophy() {
+  trophy.style.display = "flex";
+}
+
+function leaveTrophy() {
+  trophy.style.display = "none";
+}
