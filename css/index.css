@@ -1,13 +1,30 @@
 * {
-  user-select: none;
-  -ms-user-select: none;
   outline: 0;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: "IBM Plex Sans KR", sans-serif;
 }
+*::selection {
+  background-color: #6667ab;
+  color: white;
+}
 
+.fix {
+  position: fixed !important;
+  animation: down 0.5s ease;
+  top:0;
+  z-index: 999;
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 html {
   width: 100%;
   height: 100%;
@@ -32,7 +49,7 @@ canvas {
   justify-content: center;
   align-items: center;
   height: 100px;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   position: absolute;
   bottom: 10%;
@@ -51,6 +68,13 @@ canvas {
   }
 }
 
+#wave{
+
+max-height: 937px;
+}
+.my-nav{
+  width:100% !important;
+}
 .my-navbar {
   margin-left: 30vw;
 }
@@ -63,6 +87,7 @@ canvas {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top:5%;
 }
 
 .content-container {
@@ -82,7 +107,7 @@ canvas {
   justify-content: center;
   align-items: center;
   width: 70%;
-  min-width:415px;
+  min-width: 415px;
 }
 
 .title {
@@ -104,9 +129,7 @@ canvas {
   border-bottom: 3px solid black;
 }
 
-.my-nav {
-  margin-top: -1%;
-}
+
 
 .content-2 {
   margin-top: 10% !important;
@@ -117,13 +140,13 @@ canvas {
   height: 600px;
   border-radius: 10px;
   box-shadow: 0px 5px 30px 5px #c7c7c7;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
-.tech-wrap{
-  width:80%;
+.tech-wrap {
+  width: 80%;
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -132,18 +155,22 @@ canvas {
   position: relative;
   width: 20%;
   height: 10vw;
-  margin-left:5%;
-  margin-right:5%;
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s;
+}
+.circle-progress-wrap:hover {
+  width: 22% !important;
 }
 .circle-progress {
   transform: rotate(-90deg);
 
   position: relative;
-  min-width:120px;
-  min-height:120px;
+  min-width: 120px;
+  min-height: 120px;
 }
 .frame,
 .bar {
@@ -158,27 +185,21 @@ canvas {
 }
 .bar-html {
   stroke: #e34f26;
-  
 }
 .bar-css {
   stroke: #1572b6;
-
 }
-.bar-react{
-  stroke:#61DAFB;
-  
+.bar-react {
+  stroke: #61dafb;
 }
-.bar-js{
-  stroke:#F7DF1E  ;
-  
+.bar-js {
+  stroke: #f7df1e;
 }
-.bar-ts{
-  stroke:#3178C6;
-  
+.bar-ts {
+  stroke: #3178c6;
 }
-.bar-java{
-  stroke:#6DB33F;
-  
+.bar-java {
+  stroke: #6db33f;
 }
 
 .value {
@@ -190,9 +211,10 @@ canvas {
   right: 0;
   bottom: 0;
   /* top: 100%; */
-  font-size: 16px;
+  font-size: 1rem;
   width: 100%;
-  height:100%;
+  height: 100%;
+  transition: 0.2s;
 }
 
 #control {
@@ -205,27 +227,22 @@ canvas {
   }
 }
 
-
-
-@media screen and (min-width:1024px) {
-	/* Desktop */
+@media screen and (min-width: 1024px) {
+  /* Desktop */
 }
-@media screen and (min-width:768px) and (max-width: 1023px) {
-	.circle-progress-wrap{
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .circle-progress-wrap {
     width: 30% !important;
   }
 }
-@media screen and (max-width:767px){ 
-	.circle-progress-wrap{
+@media screen and (max-width: 767px) {
+  .circle-progress-wrap {
     width: 30% !important;
   }
 }
 
-
-@media screen and (max-width:1280px){
-  .value h4{
-    font-size:1rem !important;
-   
+@media screen and (max-width: 1280px) {
+  .value h4 {
+    font-size: 1rem !important;
   }
 }
-

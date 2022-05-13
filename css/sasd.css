@@ -801,7 +801,7 @@ code {
 .skills_chart_inner_javascript__2Xet6,
 .skills_chart_inner_react__2_Tlc,
 .skills_chart_inner_typescript__2U8-3 {
-  /* display:flex; */
+  display: flex;
   stroke-width: 2;
   fill: none;
   animation: skills_chart_filling__2eKLl 1.5s reverse;
@@ -1539,3 +1539,4 @@ code {
     font-size: 1rem;
   }
 }
+/*# sourceMappingURL=main.86a43305.chunk.css.map */
