@@ -1,3 +1,6 @@
+
+
+
 const content = "안녕하세요. 저는 '";
 const text = document.querySelector("#intro");
 let a = 0;
@@ -105,6 +108,8 @@ const valueJava = document.querySelector(".value-java");
 var mql = window.matchMedia("screen and (max-width: 449px)");
 
 if (!mql.matches) {
+  
+
   function overHtml() {
     valueHtml.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">웹표준 기준 태그 <br> 시멘틱 태그, SVG <br> Canvas에 대한 이해 </span>`;
   }
@@ -152,6 +157,30 @@ if (!mql.matches) {
   }
 }
 
+
+if (mql.matches) {
+  
+  $(document).on("click", ".nav-item a", function (event) {
+    event.preventDefault();
+    $("html,body").animate(
+      {
+        scrollTop: $(this.hash).offset().top - 30,
+      },
+      500
+    );
+  });
+} else {
+  $(document).on("click", ".nav-item a", function (event) {
+    event.preventDefault();
+    $("html,body").animate(
+      {
+        scrollTop: $(this.hash).offset().top - 150,
+      },
+      500
+    );
+  });
+}
+
 // $(document).ready(function ($) {
 //   $(".scroll-move").click(function (event) {
 //     event.preventDefault();
@@ -159,16 +188,6 @@ if (!mql.matches) {
 //     $("html,body").animate({ scrollTop: $(this.hash).offset().top }, 500);
 //   });
 // });
-
-$(document).on("click", ".nav-item a", function (event) {
-  event.preventDefault();
-  $("html,body").animate(
-    {
-      scrollTop: $(this.hash).offset().top - 150,
-    },
-    500
-  );
-});
 
 function navigo() {
   const header = document.querySelector("header");
@@ -193,3 +212,7 @@ function enterTrophy() {
 function leaveTrophy() {
   trophy.style.display = "none";
 }
+
+
+
+console.log(mql.matches);
