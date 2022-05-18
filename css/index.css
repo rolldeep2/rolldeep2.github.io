@@ -297,6 +297,7 @@ canvas {
 .project-desc-box li {
   margin-left: 10%;
   margin-bottom: 0.5rem;
+  min-width: 120px;
 }
 .project-desc h3 {
   font-weight: 400;
@@ -509,6 +510,12 @@ canvas {
 }
 
 @media (max-width: 449px) {
+  .nav-item{
+    margin-right: 15px !important;
+  }
+  .navbar-nav{
+    width: 100% !important;
+  }
   .value h4 {
     font-size: 1.3rem !important;
   }
