@@ -1,6 +1,3 @@
-
-
-
 const content = "안녕하세요. 저는 '";
 const text = document.querySelector("#intro");
 let a = 0;
@@ -108,8 +105,6 @@ const valueJava = document.querySelector(".value-java");
 var mql = window.matchMedia("screen and (max-width: 449px)");
 
 if (!mql.matches) {
-  
-
   function overHtml() {
     valueHtml.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">웹표준 기준 태그 <br> 시멘틱 태그, SVG <br> Canvas에 대한 이해 </span>`;
   }
@@ -157,9 +152,7 @@ if (!mql.matches) {
   }
 }
 
-
 if (mql.matches) {
-  
   $(document).on("click", ".nav-item a", function (event) {
     event.preventDefault();
     $("html,body").animate(
@@ -213,6 +206,29 @@ function leaveTrophy() {
   trophy.style.display = "none";
 }
 
+/* Youtube Api*/
+var tag = document.createElement("script");
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+/* Youtube Api end*/
 
+const triggerMargin = 300;
+const slideUpElement = document.querySelectorAll(".sa");
 
-console.log(mql.matches);
+const ani = function () {
+  for (const element of slideUpElement) {
+    if (!element.classList.contains("show")) {
+      if (
+        window.innerHeight >
+        element.getBoundingClientRect().top + triggerMargin
+      ) {
+        element.classList.add("show");
+      }
+    }
+  }
+};
+
+window.addEventListener("load", ani);
+window.addEventListener("scroll", ani);
