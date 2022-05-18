@@ -287,11 +287,11 @@ canvas {
 }
 .project-desc-box {
   display: flex;
-  width: 70%;
+  width: 100%;
   flex-direction: column;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
-  min-width: 373px;
+  /* min-width: 357px; */
 }
 
 .project-desc-box li {
@@ -541,6 +541,9 @@ canvas {
   .tech-wrap {
     box-shadow: 0px 5px 30px 5px #e7e7e7;
   }
+  .project-img{
+    max-height: 500px;;
+  }
 }
 
 @media (max-width: 550px) {
@@ -566,12 +569,13 @@ canvas {
 @media (max-width: 900px) {
   .tech-wrap {
     width: 100% !important;
-    height: 900px !important;
+    height: 600px !important;
     min-width: auto;
   }
   .tech-box {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-gap:0 !important;
   }
 }
 
