@@ -79,9 +79,6 @@ canvas {
 .my-nav {
   width: 100% !important;
 }
-.my-navbar {
-  margin-left: 30vw;
-}
 
 .nav-item {
   margin-right: 30px !important;
@@ -448,6 +445,15 @@ canvas {
   margin-right: 30px;
 }
 
+.navbar-nav {
+  flex-direction: row !important;
+}
+#navbarNav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
 @keyframes filling {
   to {
     stroke-dasharray: 0 1000;
@@ -513,13 +519,15 @@ canvas {
     padding: 40px;
   }
   .circle-progress {
-    min-width: 140px !important;
-    min-height: 140px !important;
+    min-width: 120px !important;
+    min-height: 120px !important;
   }
   .project-box {
     flex-direction: column;
   }
+}
 
+@media (max-width: 550px) {
   .footer-left span {
     font-size: 0.7rem;
   }
@@ -535,6 +543,7 @@ canvas {
   }
   .footer-right ul {
     padding: 0 !important;
+    margin-left: 5% !important;
   }
 }
 
