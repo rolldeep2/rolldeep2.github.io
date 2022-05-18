@@ -255,7 +255,7 @@ canvas {
 }
 .project-img-box img {
   width: 80%;
-  max-width:426px;
+  max-width: 426px;
 }
 .project-link-box {
   flex: 0.15;
@@ -272,7 +272,7 @@ canvas {
   align-items: center;
   justify-content: center;
   transition: 0.5s;
-  margin-right:10px;
+  margin-right: 10px;
 }
 .project-link span {
   font-weight: 500;
@@ -294,7 +294,7 @@ canvas {
   flex-direction: column;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
-  min-width:373px;
+  min-width: 373px;
 }
 
 .project-desc-box li {
@@ -358,7 +358,14 @@ canvas {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 0.5rem;
   gap: 0.5rem;
-  min-width:280px;
+  min-width: 280px;
+}
+.stacks-box2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  min-width: 220px;
+  justify-items: center;
 }
 .stacks-wrap img {
   width: 4rem;
@@ -465,8 +472,8 @@ canvas {
     font-size: 2rem !important;
   }
 
-  .project-link{
-    width:150px !important;
+  .project-link {
+    width: 150px !important;
   }
 }
 
@@ -480,20 +487,17 @@ canvas {
 }
 
 @media screen and (max-width: 1650px) {
-
-
-  .project-box{
+  .project-box {
     flex-direction: column;
   }
-  .project-link-box{
+  .project-link-box {
     justify-content: center;
   }
-  .project-desc-box{
+  .project-desc-box {
     align-items: center;
-    margin-top:10%;
-    
+    margin-top: 10%;
   }
-  .project-wrap{
+  .project-wrap {
     height: 450vh;
   }
 }
@@ -508,32 +512,30 @@ canvas {
   .content {
     padding: 40px;
   }
-  .circle-progress{
+  .circle-progress {
     min-width: 140px !important;
     min-height: 140px !important;
   }
-  .project-box{
+  .project-box {
     flex-direction: column;
   }
 
-  
-  .footer-left span{
-    font-size:0.7rem;
+  .footer-left span {
+    font-size: 0.7rem;
   }
-  .footer-box{
+  .footer-box {
     flex-direction: column;
   }
-  .footer-left{
-    border:none;
-    flex:0;
+  .footer-left {
+    border: none;
+    flex: 0;
   }
-  .footer-right{
-    flex:0;
+  .footer-right {
+    flex: 0;
   }
-  .footer-right ul{
-    padding:0 !important;
+  .footer-right ul {
+    padding: 0 !important;
   }
-  
 }
 
 @media (max-width: 900px) {
@@ -546,5 +548,4 @@ canvas {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-  
 }
