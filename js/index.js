@@ -102,50 +102,54 @@ const valueJs = document.querySelector(".value-js");
 const valueTs = document.querySelector(".value-ts");
 const valueJava = document.querySelector(".value-java");
 
-function overHtml() {
-  valueHtml.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">웹표준 기준 태그 <br> 시멘틱 태그, SVG <br> Canvas에 대한 이해 </span>`;
-}
+var mql = window.matchMedia("screen and (max-width: 449px)");
 
-function leaveHtml() {
-  valueHtml.innerHTML = `<h4>HTML</h4><span>90%</span>`;
-}
+if (!mql.matches) {
+  function overHtml() {
+    valueHtml.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">웹표준 기준 태그 <br> 시멘틱 태그, SVG <br> Canvas에 대한 이해 </span>`;
+  }
 
-function overCss() {
-  valueCss.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">레이아웃, 스타일시트 <br> 미디어 쿼리, 애니메이션 <br> SCSS에 대한 이해</span>`;
-}
+  function leaveHtml() {
+    valueHtml.innerHTML = `<h4>HTML</h4><span>90%</span>`;
+  }
 
-function leaveCss() {
-  valueCss.innerHTML = `<h4>CSS</h4><span>90%</span>`;
-}
+  function overCss() {
+    valueCss.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">레이아웃, 스타일시트 <br> 미디어 쿼리, 애니메이션 <br> SCSS에 대한 이해</span>`;
+  }
 
-function overReact() {
-  valueReact.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">React Hooks <br> Component <br> State에 대한 이해</span>`;
-}
+  function leaveCss() {
+    valueCss.innerHTML = `<h4>CSS</h4><span>90%</span>`;
+  }
 
-function leaveReact() {
-  valueReact.innerHTML = `<h4>React</h4><span>90%</span>`;
-}
-function overJs() {
-  valueJs.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">ES6 이상의 문법 <br> Event, Promise <br> prototype에 대한 이해</span>`;
-}
+  function overReact() {
+    valueReact.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">React Hooks <br> Component <br> State에 대한 이해</span>`;
+  }
 
-function leaveJs() {
-  valueJs.innerHTML = `<h4>JavaScript</h4><span>90%</span>`;
-}
-function overTs() {
-  valueTs.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">Object, Return  <br> Interface, Union <br> 상속에 대한 이해</span>`;
-}
+  function leaveReact() {
+    valueReact.innerHTML = `<h4>React</h4><span>90%</span>`;
+  }
+  function overJs() {
+    valueJs.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">ES6 이상의 문법 <br> Event, Promise <br> prototype에 대한 이해</span>`;
+  }
 
-function leaveTs() {
-  valueTs.innerHTML = `<h4>TypeScript</h4><span>90%</span>`;
-}
+  function leaveJs() {
+    valueJs.innerHTML = `<h4>JavaScript</h4><span>90%</span>`;
+  }
+  function overTs() {
+    valueTs.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">Object, Return  <br> Interface, Union <br> 상속에 대한 이해</span>`;
+  }
 
-function overJava() {
-  valueJava.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">객체지향 프로그래밍  <br> Spring 프레임워크 <br> JSP에 대한 이해</span>`;
-}
+  function leaveTs() {
+    valueTs.innerHTML = `<h4>TypeScript</h4><span>90%</span>`;
+  }
 
-function leaveJava() {
-  valueJava.innerHTML = `<h4>Java</h4><span>90%</span>`;
+  function overJava() {
+    valueJava.innerHTML = `<span style="font-weight:400; font-size:0.9rem; text-align:center">객체지향 프로그래밍  <br> Spring 프레임워크 <br> JSP에 대한 이해</span>`;
+  }
+
+  function leaveJava() {
+    valueJava.innerHTML = `<h4>Java</h4><span>90%</span>`;
+  }
 }
 
 // $(document).ready(function ($) {

@@ -144,6 +144,7 @@ canvas {
   box-shadow: 0px 5px 30px 5px #c7c7c7;
   display: flex;
   justify-content: center;
+  min-width: 825px;
 }
 .tech-box {
   display: grid;
@@ -175,8 +176,8 @@ canvas {
   transform: rotate(-90deg);
 
   position: relative;
-  min-width: 120px;
-  min-height: 120px;
+  min-width: 150px;
+  min-height: 150px;
 }
 .frame,
 .bar {
@@ -252,8 +253,9 @@ canvas {
   width: 100%;
   flex: 0.85;
 }
-.project-img-box img{
-  width:80%;
+.project-img-box img {
+  width: 80%;
+  max-width:426px;
 }
 .project-link-box {
   flex: 0.15;
@@ -270,6 +272,7 @@ canvas {
   align-items: center;
   justify-content: center;
   transition: 0.5s;
+  margin-right:10px;
 }
 .project-link span {
   font-weight: 500;
@@ -291,6 +294,7 @@ canvas {
   flex-direction: column;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
+  min-width:373px;
 }
 
 .project-desc-box li {
@@ -354,6 +358,7 @@ canvas {
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 0.5rem;
   gap: 0.5rem;
+  min-width:280px;
 }
 .stacks-wrap img {
   width: 4rem;
@@ -374,11 +379,10 @@ canvas {
   position: relative;
   align-items: center;
   justify-content: center;
-  color:white;
-  font-size:1.3rem;
-  
+  color: white;
+  font-size: 1.3rem;
 }
-.footer-wrap li{
+.footer-wrap li {
   list-style: none;
 }
 
@@ -387,7 +391,7 @@ canvas {
   align-items: center;
   justify-content: center;
   height: 40vh;
-  width:600px;
+  width: 600px;
 }
 
 .to-top {
@@ -399,50 +403,43 @@ canvas {
   width: 100%;
   height: 50px;
 }
-.to-top-btn{
+.to-top-btn {
   width: 50px;
-    height: 50px;
-    text-align: center;
-    font-size: 30px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
 
-    color: white;
-    cursor: pointer;
-    background-color: #c1c2f3;
-    border-radius: 50px;
-    transition: all 0.1s ease-in-out;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-}
-
-.to-top-btn::before{
-  content:"\f077";
-}
-.footer-left{
-  border-right:2px dashed white;
-  flex:0.5;
-  
-}
-.footer-left span{
-  margin-left:10px;
-  
-  
-}
-.footer-right{
-  flex:0.5;
-  
-}
-.footer-right ul{
-  display:flex;
-  font-size:3rem;
-  padding-left:13%;
-
-}
-.footer-right li{
-  margin-right:30px;
+  color: white;
+  cursor: pointer;
+  background-color: #c1c2f3;
+  border-radius: 50px;
+  transition: all 0.1s ease-in-out;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
-
+.to-top-btn::before {
+  content: "\f077";
+}
+.footer-left {
+  border-right: 2px dashed white;
+  flex: 0.5;
+}
+.footer-left span {
+  margin-left: 10px;
+}
+.footer-right {
+  flex: 0.5;
+}
+.footer-right ul {
+  display: flex;
+  font-size: 3rem;
+  padding-left: 13%;
+}
+.footer-right li {
+  margin-right: 30px;
+}
 
 @keyframes filling {
   to {
@@ -451,21 +448,103 @@ canvas {
 }
 
 @media screen and (min-width: 1024px) {
-  /* Desktop */
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .circle-progress-wrap {
-    width: 30% !important;
+    width: 50% !important;
+  }
+  .tech-wrap {
+    width: 150% !important;
   }
 }
 @media screen and (max-width: 767px) {
   .circle-progress-wrap {
     width: 30% !important;
   }
+  #introbox {
+    font-size: 2rem !important;
+  }
+
+  .project-link{
+    width:150px !important;
+  }
 }
 
 @media screen and (max-width: 1280px) {
-  .value h4 {
+  /* .value h4 {
     font-size: 1rem !important;
+  } */
+  .value span {
+    font-size: 0.8rem !important;
   }
+}
+
+@media screen and (max-width: 1650px) {
+
+
+  .project-box{
+    flex-direction: column;
+  }
+  .project-link-box{
+    justify-content: center;
+  }
+  .project-desc-box{
+    align-items: center;
+    margin-top:10%;
+    
+  }
+  .project-wrap{
+    height: 450vh;
+  }
+}
+
+@media (max-width: 449px) {
+  .value h4 {
+    font-size: 1.3rem !important;
+  }
+  #introbox {
+    font-size: 1.4rem !important;
+  }
+  .content {
+    padding: 40px;
+  }
+  .circle-progress{
+    min-width: 140px !important;
+    min-height: 140px !important;
+  }
+  .project-box{
+    flex-direction: column;
+  }
+
+  
+  .footer-left span{
+    font-size:0.7rem;
+  }
+  .footer-box{
+    flex-direction: column;
+  }
+  .footer-left{
+    border:none;
+    flex:0;
+  }
+  .footer-right{
+    flex:0;
+  }
+  .footer-right ul{
+    padding:0 !important;
+  }
+  
+}
+
+@media (max-width: 900px) {
+  .tech-wrap {
+    width: 100% !important;
+    height: 900px !important;
+    min-width: auto;
+  }
+  .tech-box {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
 }
