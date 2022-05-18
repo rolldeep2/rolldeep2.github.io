@@ -544,6 +544,10 @@ canvas {
   .project-img{
     max-height: 500px;;
   }
+  .project-link{
+    background-color: #6667ab !important;
+    color: white !important;
+  }
 }
 
 @media (max-width: 550px) {
